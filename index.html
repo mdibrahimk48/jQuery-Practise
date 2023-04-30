@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Increment/Decrement Example</title>
+    <style>
+      button {
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        margin: 0 10px;
+      }
+
+      #number-field {
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 80px;
+        text-align: center;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var field = $("#number-field");
+
+        $("#increment-button").click(function() {
+          var value = parseInt(field.val());
+          field.val(value + 1);
+        });
+
+        $("#decrement-button").click(function() {
+          var value = parseInt(field.val());
+          field.val(value - 1);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="increment-button">+</button>
+    <input type="text" id="number-field" value="0" />
+    <button id="decrement-button">-</button>
+  </body>
+</html>
